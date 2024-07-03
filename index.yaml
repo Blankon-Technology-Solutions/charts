@@ -3,7 +3,7 @@ entries:
   application:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-07-03T09:41:11.413788969Z"
+    created: "2024-07-03T09:42:20.841514185Z"
     description: A Helm chart for Kubernetes
     digest: 359fcd914b366d06cd5ebcecd8ce93c177656ca5a7992a8bbb976021173585b2
     name: application
@@ -11,10 +11,46 @@ entries:
     urls:
     - https://raw.githubusercontent.com/Blankon-Technology-Solutions/charts/main/application-0.1.0.tgz
     version: 0.1.0
+  claim:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-07-03T09:42:20.845857171Z"
+    dependencies:
+    - condition: application.enabled
+      name: application
+      repository: https://raw.githubusercontent.com/Blankon-Technology-Solutions/charts/main
+      version: 0.1.0
+    - condition: rds.enabled
+      name: rds
+      repository: https://raw.githubusercontent.com/Blankon-Technology-Solutions/charts/main
+      version: 0.1.0
+    - condition: nosql.enabled
+      name: nosql
+      repository: https://raw.githubusercontent.com/Blankon-Technology-Solutions/charts/main
+      version: 0.1.0
+    - condition: file-storage.enabled
+      name: file-storage
+      repository: https://raw.githubusercontent.com/Blankon-Technology-Solutions/charts/main
+      version: 0.1.0
+    - condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://raw.githubusercontent.com/Blankon-Technology-Solutions/charts/main
+      version: 0.1.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://raw.githubusercontent.com/Blankon-Technology-Solutions/charts/main
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: 7deed692617cef5b2adda1f41f9a2630a220abbf4fec6b13e20739a51e714e5f
+    name: claim
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/Blankon-Technology-Solutions/charts/main/claim-0.1.0.tgz
+    version: 0.1.0
   file-storage:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-07-03T09:41:11.414929659Z"
+    created: "2024-07-03T09:42:20.847044548Z"
     description: A Helm chart for Kubernetes
     digest: a0b2e020d9e937c407ba6cdb672e57cee65f351d701b7f0e72999b3b6db5785a
     name: file-storage
@@ -25,7 +61,7 @@ entries:
   nosql:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-07-03T09:41:11.416038247Z"
+    created: "2024-07-03T09:42:20.848239415Z"
     description: A Helm chart for Kubernetes
     digest: 14733a0a34a5f991b55e149c5416f31e333a7beffa25ae41493d3f694becb743
     name: nosql
@@ -36,7 +72,7 @@ entries:
   rabbitmq:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-07-03T09:41:11.41767089Z"
+    created: "2024-07-03T09:42:20.849237227Z"
     description: A Helm chart for Kubernetes
     digest: 848e8ab358c32b8c268fdb1524b90a7fbfb6ceb62d38b451279f6ca4d8bc7c72
     name: rabbitmq
@@ -47,7 +83,7 @@ entries:
   rds:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-07-03T09:41:11.418649575Z"
+    created: "2024-07-03T09:42:20.850348451Z"
     description: A Helm chart for Kubernetes
     digest: 2d3fc48d4775b9ac3d474523d7cfc98da043f4a04d395ca400a9687bd7cc34c8
     name: rds
@@ -58,7 +94,7 @@ entries:
   redis:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-07-03T09:41:11.419371374Z"
+    created: "2024-07-03T09:42:20.851470693Z"
     description: A Helm chart for Kubernetes
     digest: bb69e1426ed3a566b3fbf4ebe0769d3b20e3e8bf514e16bc2a9891b8b211af0e
     name: redis
@@ -66,4 +102,4 @@ entries:
     urls:
     - https://raw.githubusercontent.com/Blankon-Technology-Solutions/charts/main/redis-0.1.0.tgz
     version: 0.1.0
-generated: "2024-07-03T09:41:11.410984259Z"
+generated: "2024-07-03T09:42:20.840168888Z"
